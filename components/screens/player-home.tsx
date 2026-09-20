@@ -44,7 +44,6 @@ export function PlayerHome() {
       <PageHeader
         eyebrow={`${team.name} ${team.ageGroup} / ${player.name} / ${player.position}`}
         title={`${player.name}、今日はここから`}
-        description="採点や能力値はありません。あるのは、いま取り組んでいるテーマと、試合から切り出された場面だけです。"
       />
 
       <section className="mb-6">

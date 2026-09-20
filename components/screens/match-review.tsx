@@ -89,9 +89,6 @@ export function MatchReview() {
             </div>
             <div className="mt-2 text-lg font-semibold tracking-tight">{selected.title}</div>
             <p className="mt-1.5 text-pretty text-sm leading-relaxed text-foreground/85">{selected.observation}</p>
-            <p className="mt-2 text-[11px] text-muted-foreground">
-              観察できる事実だけを書いています。良し悪しの判断は、選手と指導者の対話に残しています。
-            </p>
 
             <div className="mt-4 border-t border-border pt-4">
               <SectionLabel className="mb-2">関係する選手</SectionLabel>

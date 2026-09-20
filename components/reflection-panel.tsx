@@ -79,7 +79,6 @@ export function ReflectionPanel({
     <div className={cn("flex min-h-0 flex-col rounded-xl border border-border bg-card", className)}>
       <div className="flex items-center justify-between border-b border-border px-4 py-3">
         <div className="text-sm font-medium">振り返り</div>
-        <div className="text-[11px] text-muted-foreground">AIは問いを投げるだけで、評価はしません</div>
       </div>
 
       <div ref={scrollRef} className="flex-1 space-y-4 overflow-y-auto px-4 py-4">
@@ -175,9 +174,7 @@ export function ReflectionPanel({
                   label="次に試すことを編集"
                 />
               </div>
-              <div className="mt-1.5 text-[11px] text-muted-foreground">
-                自分の言葉に書き換えられます。AIのまとめではなく、あなたが決めることです。
-              </div>
+              <div className="mt-1.5 text-[11px] text-muted-foreground">自分の言葉に書き換えられます。</div>
             </div>
             {shared ? (
               <div className="flex items-center justify-between gap-3 rounded-lg border border-border px-3 py-2.5 text-sm">

@@ -38,7 +38,6 @@ export function UnitDiscussion({ sceneId }: { sceneId: string }) {
       <PageHeader
         eyebrow={`場面 ${scene.minute} / グループでの対話`}
         title={`${involvedNames}、同じ場面をどう見ていたか`}
-        description="どちらが正しいかを決める場ではありません。同じ場面に関わった選手の見え方を並べて、次に話すことを見つけます。"
       />
 
       <div className="grid gap-6 lg:grid-cols-[3fr_2fr]">
@@ -88,9 +87,6 @@ export function UnitDiscussion({ sceneId }: { sceneId: string }) {
           </div>
           <Panel tone="blue">
             <p className="text-pretty text-[15px] leading-relaxed">{discussion.synthesis}</p>
-            <p className="mt-3 text-xs text-muted-foreground">
-              AIは違いを整理するだけで、どちらが正しいかは判断しません。
-            </p>
           </Panel>
         </section>
 
@@ -110,7 +106,7 @@ export function UnitDiscussion({ sceneId }: { sceneId: string }) {
               className="mt-4 bg-background"
             />
             <div className="mt-3 flex items-center justify-between gap-3">
-              <span className="text-[11px] text-muted-foreground">AIは答えを出しません。ここに書いたことは、指導者にも共有されます。</span>
+              <span className="text-[11px] text-muted-foreground">ここに書いたことは、指導者にも共有されます。</span>
               <Button onClick={submit} disabled={!draft.trim()} size="sm">
                 {savedFlash ? (
                   <>
@@ -127,14 +123,13 @@ export function UnitDiscussion({ sceneId }: { sceneId: string }) {
       </div>
 
       <div className="mt-8 flex flex-wrap items-center gap-3 rounded-xl bg-muted px-5 py-4 text-sm">
-        <span className="text-muted-foreground">この対話は、指導者が次に話す論点として受け取ります。</span>
         {state.role === "coach" ? (
           <Link href="/coach/review" className="inline-flex items-center gap-1 font-medium text-blue hover:underline">
             指導者向けの整理を見る
             <ArrowRight className="size-3.5" />
           </Link>
         ) : (
-          <span className="text-xs text-muted-foreground">右上の「表示する立場」を指導者に切り替えると、指導者の画面で続きを見られます。</span>
+          <span className="text-xs text-muted-foreground">指導者の画面で続きを見るには、右上の「表示する立場」を切り替えてください。</span>
         )}
       </div>
     </div>

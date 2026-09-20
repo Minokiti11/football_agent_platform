@@ -36,7 +36,6 @@ export function CoachOverview() {
       <PageHeader
         eyebrow={`${team.name} ${team.ageGroup} / 指導者`}
         title="今、チームが何について学んでいるか"
-        description="数字を並べるのではなく、テーマと、選手たちの振り返りから見えてきた論点を確認します。"
       />
 
       <div className="grid gap-6 lg:grid-cols-[1.4fr_1fr]">

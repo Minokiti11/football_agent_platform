@@ -28,7 +28,7 @@ export function CoachReview() {
       <PageHeader
         eyebrow={`${team.name} ${team.ageGroup} vs ${match.opponent} / 指導者`}
         title="選手たちはどう見ていたか"
-        description={`${done} / ${players.length}人の振り返りから、AIが共通点と違いを整理しました。すべてを読む代わりに、話す価値のありそうな論点から見られます。`}
+        description={`${done} / ${players.length}人の振り返りから整理した論点です。`}
       />
 
       <div className="grid gap-6 lg:grid-cols-[1.2fr_1fr]">
@@ -111,9 +111,6 @@ export function CoachReview() {
                 );
               })}
             </div>
-            <p className="mt-3 text-xs text-muted-foreground">
-              AIは論点を出すところまで。どう扱うかは指導者が決め、選択は保存されます。
-            </p>
           </section>
 
           {decision ? (

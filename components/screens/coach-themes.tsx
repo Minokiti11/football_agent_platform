@@ -34,7 +34,7 @@ export function CoachThemes() {
       <PageHeader
         eyebrow="指導者 / テーマ"
         title="テーマを整理する"
-        description="チーム・グループ・個人という粒度で整理しますが、一方向のトップダウンではありません。試合や選手から得た気づきで、チームのテーマも更新されます。"
+        description="チーム・グループ・個人のテーマと、試合から出てきた更新の候補。"
       />
 
       <div className="grid gap-8 lg:grid-cols-[1.35fr_1fr]">
@@ -49,9 +49,6 @@ export function CoachThemes() {
                 className="min-h-0 resize-none border-0 bg-transparent px-0 py-0 text-[17px] leading-relaxed font-medium shadow-none focus-visible:ring-0"
                 aria-label="指導者の言葉"
               />
-              <div className="mt-3 text-xs text-muted-foreground">
-                指導者が書いた言葉が出発点です。ここからAIがたたき台を作ります。
-              </div>
             </Panel>
           </section>
 
@@ -195,9 +192,6 @@ export function CoachThemes() {
             <Panel tone={state.proposalAccepted ? "green" : "card"}>
               <div className="text-xs text-muted-foreground">{themeUpdateProposal.source}</div>
               <div className="mt-2 text-balance text-[15px] font-semibold leading-snug">{themeUpdateProposal.proposal}</div>
-              <p className="mt-2 text-sm text-muted-foreground">
-                選手たちの振り返りから出てきた論点です。テーマに入れるかどうかは指導者が決めます。
-              </p>
               {state.proposalAccepted ? (
                 <div className="mt-4 flex items-center justify-between gap-3">
                   <span className="inline-flex items-center gap-1.5 text-sm text-green">
